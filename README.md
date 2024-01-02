@@ -89,15 +89,15 @@ We're dealing with a classification problem because our target variable is categ
 
 To make sure that we had a clear view on how each model was performing we chose five different metrics.
 
-- Accuracy, to check the proportion of correct predictions among the total number of cases that we examined and to have a quick overview of how often the model is correct.
+- **Accuracy**, to check the proportion of correct predictions among the total number of cases that we examined and to have a quick overview of how often the model is correct.
 
-- Precision, to help us understanding the model's performance in terms of producing false alarms.
+- **Precision**, to help us understanding the model's performance in terms of producing false alarms.
 
-- Recall, to quantify how many actual positive cases were correctly identified.
+- **Recall**, to quantify how many actual positive cases were correctly identified.
 
-- F1-Score provides a balance between precision and recall. It's a harmonic mean of these two metrics, useful when you need to seek a balance between identifying as many positives as possible and maintaining a high quality of positive identifications.
+- **F1-Score** provides a balance between precision and recall. It's a harmonic mean of these two metrics, useful when you need to seek a balance between identifying as many positives as possible and maintaining a high quality of positive identifications.
 
-- AUC Score (Area Under the Receiver Operating Characteristic Curve), to show how well the model can distinguish between classes.
+- **AUC Score** (Area Under the Receiver Operating Characteristic Curve), to show how well the model can distinguish between classes.
 
 Each of these metrics addresses different aspects of a classification model's performance, offering a comprehensive evaluation when used together. This multi-metric approach ensures that the strengths and weaknesses of the model are thoroughly understood, leading to more informed decisions in model selection and further tuning.
 
