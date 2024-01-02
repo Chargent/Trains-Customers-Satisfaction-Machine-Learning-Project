@@ -41,7 +41,25 @@ After completing the EDA and correlation analysis we started to process our data
 
 - Then through the use of a model pipeline we made sure that the categorical data where encoded and we scaled all the data to be evenly usable for training.
 
-- We than 
+- As the last step of processing we finally divided train and test in a common 80%/20% split between training and test set. Then we further partitioned the training data to create a validation set that was essential to make an initial unbiased model evaluation.
+
+With the data processing done we started testing with the some base models: Logistic Regression, K Nearest Neighbour, Decision Tree and Random Forest.
+
+- We trained each model on our dataset, evaluating their performance using a validation set. Through this testing we made sure that the models we chose suited the type of classification problem that we are working on.
+
+- After analising the metrics that we chose, we concluded that one model (Logistic Regression) was clearly under performing compared to the other three models and consequentially we chose to not look further on it.
+
+![Alt text](images/basemodelsmetrics.png)
+
+After skimming through this models we started the hyperparameter tuning.
+
+- For each of the best models performed hyperparameter tuning by first using Randomized Search to get an idea of a small range of parameters around the ones that are found to be the best.
+
+- Then by using Grid Search we input this previously found range and get parameters that improve the performance of the model.
+
+- For each of the models we made sure that the parameters had the best possible outcome in the metrics score and we made sure that through the cross validation of the searches the results where consistent.
+
+In the end we tested the best three models on the test set and witnessed that through the hyperparameter tuning we actually got better overall metrics scores.
 
 ## Experimental Design ✒️
 
@@ -51,8 +69,37 @@ following for each experiment:
 • The main purpose: 1-2 sentence high-level explanation 
 • Baseline(s): describe the method(s) that you used to compare your work 
 to 
-• Evaluation Metrics(s): which ones did you use and why?
+We're dealing with a classification problem because our target variable is categorical, indicating whether customers are satisfied or not. To tackle this we're using four models:
 
+- **Logistic Regression** 
+    
+    For binary classification problems with relatively simple, linear relationships between features and the target variable is a solid starting point to get information on the dataset, even if usually is not the most accurate model that is our primary goal.
+
+- **K-Nearest Neighbors (KNN)** 
+    
+    Is an intuitive method that classifies a data point based on how its neighbors are classified. This model assumes that similar things exist in close proximity. In the context of customer satisfaction, it looks at the 'K' most similar customers (based on the features) to predict a customer's satisfaction. It's beneficial for capturing complex patterns without assuming a specific distribution in the data.
+
+- **Decision Trees** 
+
+    Offers a more flexible approach, handling complex patterns by dividing the data using a set of decision rules. This can be especially useful if there are interactions between features that affect customer satisfaction.
+
+- **Random Forests** 
+
+    build upon classification trees, using an ensemble of trees to improve predictive accuracy and control over-fitting. Given the likely complexity and potential noise in customer satisfaction data, the robustness of random forests makes them a strong candidate for improving prediction performance.Selecting these four models allows us to compare a simple linear method with more complex non-linear methods, ensuring we explore both straightforward and intricate patterns in the data.
+
+To make sure that we had a clear view on how each model was performing we chose five different metrics.
+
+- Accuracy, to check the proportion of correct predictions among the total number of cases that we examined and to have a quick overview of how often the model is correct.
+
+- Precision, to help us understanding the model's performance in terms of producing false alarms.
+
+- Recall, to quantify how many actual positive cases were correctly identified.
+
+- F1-Score provides a balance between precision and recall. It's a harmonic mean of these two metrics, useful when you need to seek a balance between identifying as many positives as possible and maintaining a high quality of positive identifications.
+
+- AUC Score (Area Under the Receiver Operating Characteristic Curve), to show how well the model can distinguish between classes.
+
+Each of these metrics addresses different aspects of a classification model's performance, offering a comprehensive evaluation when used together. This multi-metric approach ensures that the strengths and weaknesses of the model are thoroughly understood, leading to more informed decisions in model selection and further tuning.
 
 ## Results 📑
 
@@ -63,6 +110,8 @@ from your work
 your findings 
 • All the figures containing results should be generated from the code
 
+
+![Alt text](images/testmodelsmetrics.png)
 
 ## Conclusions 💡
 
