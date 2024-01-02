@@ -7,7 +7,7 @@ Andrea Contino 284471
 
 Piergiorgio Zannella 284951
 
-## Introduction🚅🚝🚆🚂
+## Introduction🚂
 
 Our project aims at augmenting the prediction of customer satisfaction for the ThomasTrain Company by integrating machine learinig and data science techniques with customer service insights. Our project dives into the "trains.csv" dataset, which encompasses a variety of variables including demographic details, travel information, and service ratings. The primary objective is to deduce customer satisfaction levels indirectly through analysis of the data, as opposed to relying solely on direct customer feedback, to effectively target users with promotions and making the retention higher.
 
@@ -19,22 +19,29 @@ Our aim was to construct machine learning models that could accurately categoriz
 
 In this section, we outline the methods used for our project. Our approach involved a blend of data handling, visualization, and machine learning techniques.
 
-First we conducted Exploratory Data Analysis (EDA) to take a look at our data features and properties. We started with the basics, utilizing Pandas for managing our dataset, for visualization we turned to Matplotlib and Seaborn, essential  for designing plots and statistical graphs. After loading our dataset into a Pandas DataFrame, we took a look into its structure. This step was crucial for setting up our subsequent analysis and to have a general understanding of the distributions. 
+- First we conducted Exploratory Data Analysis (EDA) to take a look at our data features and properties. We started with the basics, utilizing Pandas for managing our dataset, for visualization we turned to Matplotlib and Seaborn, essential  for designing plots and statistical graphs. After loading our dataset into a Pandas DataFrame, we took a look into its structure. This step was crucial for setting up our subsequent analysis and to have a general understanding of the distributions. 
 
 ![Alt text](images/distributions.png)
 
-We graphed the distribution of categorical features among which the target variable “Satisfied”, through histograms and pie charts to give us insights into the distribution of this type of data. 
+- We graphed the distribution of categorical features among which the target variable “Satisfied”, through histograms and pie charts to give us insights into the distribution of this type of data. 
 
 ![Alt text](images/piechart.png)
 
-We dove into the dataset by looking at its shape, data types, missing values, and unique values. This comprehensive overview helped us in tailoring our preprocessing strategies, for instance in the decision to remove or integrate the Nan values.
+- Then we dove into the dataset by looking at its shape, data types, missing values, and unique values. This comprehensive overview helped us in tailoring our preprocessing strategies, for instance in the decision to remove or integrate the Nan values.
 
-The categorical 'Satisfied' column was encoded into numerical values (0 and 1), a necessary step for the classification models we intended to use. 
+- The categorical 'Satisfied' column was encoded into numerical values (0 and 1), a necessary step for the classification models we intended to use. 
 
-Then we plotted a correlation heatmap to get the most correlated features to our target variable. It helped us pinpoint which variables might be key players. 
+- Then we plotted a correlation heatmap to get the most correlated features to our target variable. It helped us pinpoint which variables might be key players. 
 
 ![Alt text](images/correlation.png)
 
+After completing the EDA and correlation analysis we started to process our data to fit into the models.
+
+- First using a threshold we removed some features that had a really low correlation with the target variable and removed the target variable from the data.
+
+- Then through the use of a model pipeline we made sure that the categorical data where encoded and we scaled all the data to be evenly usable for training.
+
+- We than 
 
 ## Experimental Design ✒️
 
