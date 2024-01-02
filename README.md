@@ -21,17 +21,19 @@ In this section, we outline the methods used for our project. Our approach invol
 
 First we conducted Exploratory Data Analysis (EDA) to take a look at our data features and properties. We started with the basics, utilizing Pandas for managing our dataset, for visualization we turned to Matplotlib and Seaborn, essential  for designing plots and statistical graphs. After loading our dataset into a Pandas DataFrame, we took a look into its structure. This step was crucial for setting up our subsequent analysis and to have a general understanding of the distributions. 
 
-![Alt text](Images/distribution_histograms.png)
+![Alt text](images/distributions.png)
 
-We graphed the distribution of numerical features and the target variable “Satisfied” through histograms and pie charts gave us insights into the skewness and spread of our data. 
+We graphed the distribution of categorical features among which the target variable “Satisfied”, through histograms and pie charts to give us insights into the distribution of this type of data. 
 
-![Alt text](Images/pie_chart.png)
+![Alt text](images/piechart.png)
 
 We dove into the dataset by looking at its shape, data types, missing values, and unique values. This comprehensive overview helped us in tailoring our preprocessing strategies, for instance in the decision to remove or integrate the Nan values.
 
 The categorical 'Satisfied' column was encoded into numerical values (0 and 1), a necessary step for the classification models we intended to use. 
 
 Then we plotted a correlation heatmap to get the most correlated features to our target variable. It helped us pinpoint which variables might be key players. 
+
+![Alt text](images/correlation.png)
 
 
 ## Experimental Design ✒️
