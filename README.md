@@ -107,8 +107,8 @@ The tree-base models (Decision Tree and Random Forest) demonstrate strong and ba
 
 ## Conclusions 💡
 
-List some concluding remarks. In particular: 
-• Summarize in one paragraph the take-away point from your work. 
-• Include one paragraph to explain what questions may not be fully 
-answered by your work as well as natural next steps for this direction of 
-future work
+In the end we got three models (Random Forest, Decison Tree and K Nearest Neighbors) that all worked fairly well on the test sets (all over 92% score in every metric), making them suitable for this kind of classification problem, because it succesfully identifies satisfied and unsatified customers.
+
+This project was a valuable learning experience to deepen our understanding of machine learning techniques and their practical applications. Through the making of the project we deeply understood the importance of all the steps involving the creation of an efficient machine learning model like EDA (Exploratory Data Analysis) and Hyperparameter Tuning.
+
+To develop our work beyond the performance that we got it is definitely possible to use a model like a Neural Network, which can grasp really deep and complex correlations between data, or a unsupervised learning model. Furthermore we could have some more external data regarding the trains market, or more generally anything that can influence customer satisfaction, to possibly make the predictions even more accurate than the once we got through our process. To fully answer the needs of a company this steps would make a more professional and complete data prediction.
