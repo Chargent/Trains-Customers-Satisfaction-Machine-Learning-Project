@@ -9,7 +9,7 @@ Piergiorgio Zannella 284951
 
 ## Introduction🚂
 
-Our project aims at augmenting the prediction of customer satisfaction for the ThomasTrain Company by integrating machine learinig and data science techniques with customer service insights. Our project dives into the "trains.csv" dataset, which encompasses a variety of variables including demographic details, travel information, and service ratings. The primary objective is to deduce customer satisfaction levels indirectly through analysis of the data, as opposed to relying solely on direct customer feedback, to effectively target users with promotions and making the retention higher.
+Our project aims at augmenting the prediction of customer satisfaction for the train company by integrating machine learinig and data science techniques with customer service insights. Our project dives into the "trains.csv" dataset, which encompasses a variety of variables including demographic details, travel information, and service ratings. The primary objective is to deduce customer satisfaction levels indirectly through analysis of the data, as opposed to relying solely on direct customer feedback, to effectively target users with promotions and making the retention higher.
 
 In the initial phase, we conducted an exploratory data analysis (EDA) to unearth trends and interconnections within the data. To prepare the dataset for effective machine learning modeling, we undertook several preprocessing steps such as filling in missing values, converting categorical data into a usable format, and eliminating data outliers. 
 
@@ -67,8 +67,7 @@ Describe any experiments you conducted to
 demonstrate/validate the target contribution(s) of your project; indicate the 
 following for each experiment: 
 • The main purpose: 1-2 sentence high-level explanation 
-• Baseline(s): describe the method(s) that you used to compare your work 
-to 
+
 We're dealing with a classification problem because our target variable is categorical, indicating whether customers are satisfied or not. To tackle this we're using four models:
 
 - **Logistic Regression** 
@@ -101,15 +100,12 @@ To make sure that we had a clear view on how each model was performing we chose 
 
 Each of these metrics addresses different aspects of a classification model's performance, offering a comprehensive evaluation when used together. This multi-metric approach ensures that the strengths and weaknesses of the model are thoroughly understood, leading to more informed decisions in model selection and further tuning.
 
+In the end for hyperparameter tuning we made sure to look for the best parameters by first using a RandomizedSearchCV() to get a small range of parameters that we could work on through the GridSearchCV() to get a tuning that wasn't too much computationally expensive.
+
 ## Results 📑
-
-Describe the following: 
-• Main finding(s): report your final results and what you might conclude 
+Main finding(s): report your final results and what you might conclude 
 from your work 
-• Include at least one placeholder figure and/or table for communicating 
-your findings 
-• All the figures containing results should be generated from the code
-
+The tree-base models (Decision Tree and Random Forest) demonstrate strong and balanced performances, making them suitable for our scenario. KNN, while effective, tends to have a noticeably lower recall, and Logistic Regression, despite being the simplest, shows some limitations in all the metrics, suggesting its use in scenarios where model simplicity and interpretability are more crucial than achieving the highest possible accuracy, so it didn't go further into the testing.
 
 ![Alt text](images/testmodelsmetrics.png)
 
