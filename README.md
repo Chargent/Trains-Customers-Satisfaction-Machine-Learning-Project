@@ -47,7 +47,7 @@ With the data processing done we started testing with the some base models: Logi
 
 - We trained each model on our dataset, evaluating their performance using a validation set. Through this testing we made sure that the models we chose suited the type of classification problem that we are working on.
 
-- After analising the metrics that we chose, we concluded that one model (Logistic Regression) was clearly under performing compared to the other three models and consequentially we chose to not look further on it.
+- After analising the metrics that we chose, we concluded that one model (Logistic Regression) was clearly under performing compared to the other three models and consequentially we chose to not look further in it.
 
 ![Alt text](images/basemodelsmetrics.png)
 
