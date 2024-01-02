@@ -17,14 +17,21 @@ Our aim was to construct machine learning models that could accurately categoriz
 
 ## Methods 🔍
 
-Describe your proposed ideas (e.g., features, algorithm(s), 
-training overview, design choices, etc.) and your environment so that: 
-• A reader can understand why you made your design decisions and the 
-reasons behind any other choice related to the project 
-• A reader should be able to recreate your environment (e.g., conda list, 
-conda envexport, etc.) 
-• It may help to include a figure illustrating your ideas, e.g., a flowchart 
-illustrating the steps in your machine learning system(s) 
+In this section, we outline the methods used for our project. Our approach involved a blend of data handling, visualization, and machine learning techniques.
+
+First we conducted Exploratory Data Analysis (EDA) to take a look at our data features and properties. We started with the basics, utilizing Pandas for managing our dataset, for visualization we turned to Matplotlib and Seaborn, essential  for designing plots and statistical graphs. After loading our dataset into a Pandas DataFrame, we took a look into its structure. This step was crucial for setting up our subsequent analysis and to have a general understanding of the distributions. 
+
+![Alt text](Images/distribution_histograms.png)
+
+We graphed the distribution of numerical features and the target variable “Satisfied” through histograms and pie charts gave us insights into the skewness and spread of our data. 
+
+![Alt text](Images/pie_chart.png)
+
+We dove into the dataset by looking at its shape, data types, missing values, and unique values. This comprehensive overview helped us in tailoring our preprocessing strategies, for instance in the decision to remove or integrate the Nan values.
+
+The categorical 'Satisfied' column was encoded into numerical values (0 and 1), a necessary step for the classification models we intended to use. 
+
+Then we plotted a correlation heatmap to get the most correlated features to our target variable. It helped us pinpoint which variables might be key players. 
 
 
 ## Experimental Design ✒️
