@@ -53,7 +53,7 @@ With the data processing done we started testing with the some base models: Logi
 
 After skimming through this models we started the hyperparameter tuning.
 
-- For each of the best models performed hyperparameter tuning by first using Randomized Search to get an idea of a small range of parameters around the ones that are found to be the best.
+- For each of the best models we performed hyperparameter tuning by first using Randomized Search to get an idea of a small range of parameters around the ones that are found to be the best.
 
 - Then by using Grid Search we input this previously found range and get parameters that improve the performance of the model.
 
