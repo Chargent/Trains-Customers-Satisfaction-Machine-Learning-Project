@@ -81,7 +81,7 @@ We're dealing with a classification problem because our target variable is categ
 
 - **Random Forests** 
 
-    build upon classification trees, using an ensemble of trees to improve predictive accuracy and control over-fitting. Given the likely complexity and potential noise in customer satisfaction data, the robustness of random forests makes them a strong candidate for improving prediction performance.Selecting these four models allows us to compare a simple linear method with more complex non-linear methods, ensuring we explore both straightforward and intricate patterns in the data.
+    Build upon classification trees, using an ensemble of trees to improve predictive accuracy and control over-fitting. Given the likely complexity and potential noise in customer satisfaction data, the robustness of random forests makes them a strong candidate for improving prediction performance.Selecting these four models allows us to compare a simple linear method with more complex non-linear methods, ensuring we explore both straightforward and intricate patterns in the data.
 
 To make sure that we had a clear view on how each model was performing we chose five different metrics.
 
