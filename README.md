@@ -63,12 +63,9 @@ In the end we tested the best three models on the test set and witnessed that th
 
 ## Experimental Design ✒️
 
-Describe any experiments you conducted to 
-demonstrate/validate the target contribution(s) of your project; indicate the 
-following for each experiment: 
-• The main purpose: 1-2 sentence high-level explanation 
+The main purpose of our design is focused on accurately predicting customer satisfaction and identifying the most impactful features that can make us obtain accurate findings possible. To ensure this we tested four different models, five different metrics and we made sure that the tuning was on point through the process that we described above.
 
-We're dealing with a classification problem because our target variable is categorical, indicating whether customers are satisfied or not. To tackle this we're using four models:
+We're dealing with a classification problem because our target variable is categorical, indicating whether customers are satisfied or not. To tackle this we used four models:
 
 - **Logistic Regression** 
     
@@ -103,8 +100,7 @@ Each of these metrics addresses different aspects of a classification model's pe
 In the end for hyperparameter tuning we made sure to look for the best parameters by first using a RandomizedSearchCV() to get a small range of parameters that we could work on through the GridSearchCV() to get a tuning that wasn't too much computationally expensive.
 
 ## Results 📑
-Main finding(s): report your final results and what you might conclude 
-from your work 
+
 The tree-base models (Decision Tree and Random Forest) demonstrate strong and balanced performances, making them suitable for our scenario. KNN, while effective, tends to have a noticeably lower recall, and Logistic Regression, despite being the simplest, shows some limitations in all the metrics, suggesting its use in scenarios where model simplicity and interpretability are more crucial than achieving the highest possible accuracy, so it didn't go further into the testing.
 
 ![Alt text](images/testmodelsmetrics.png)
